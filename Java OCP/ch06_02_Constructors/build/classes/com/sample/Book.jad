@@ -1,0 +1,17 @@
+// Decompiled by DJ v3.7.7.81 Copyright 2004 Atanas Neshkov  Date: 2020/5/11 ¤U¤È 08:55:08
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   Book.java
+
+package com.sample;
+
+import java.io.PrintStream;
+
+public class Book
+{
+
+    public Book()
+    {
+        System.out.println("Book()...");
+    }
+}

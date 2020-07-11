@@ -1,0 +1,29 @@
+// Decompiled by DJ v3.7.7.81 Copyright 2004 Atanas Neshkov  Date: 2020/5/18 ¤U¤È 07:39:01
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   MyInterface.java
+
+package com.sample;
+
+import java.io.PrintStream;
+
+public interface MyInterface
+{
+
+    public abstract void method2();
+
+    public abstract void methos3();
+
+    public void method4()
+    {
+        System.out.println("default method4()...");
+    }
+
+    public static void method5()
+    {
+        System.out.println("static method5()...");
+    }
+
+    public static final int d = 40;
+    public static final int e = 50;
+}

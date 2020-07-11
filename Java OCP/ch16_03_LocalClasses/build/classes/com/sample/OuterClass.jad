@@ -1,0 +1,67 @@
+// Decompiled by DJ v3.7.7.81 Copyright 2004 Atanas Neshkov  Date: 2020/6/3 ¤U¤È 07:50:48
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   MainClass.java
+
+package com.sample;
+
+import java.io.PrintStream;
+
+class OuterClass
+{
+
+    OuterClass()
+    {
+        a = 1;
+        b = 2;
+    }
+
+    public void outerMethod(final int d)
+    {
+        final int e = 5;
+        int f = 6;
+        class _cls1InnerClass
+        {
+
+            public void show()
+            {
+                System.out.println((new StringBuilder()).append("OuterClass a = ").append(a).toString());
+                System.out.println((new StringBuilder()).append("OuterClass b = ").append(OuterClass.this.b).toString());
+                System.out.println((new StringBuilder()).append("OuterClass c = ").append(OuterClass.c).toString());
+                System.out.println((new StringBuilder()).append("InnerClass b = ").append(b).toString());
+                System.out.println((new StringBuilder()).append("outerMethod d = ").append(d).toString());
+                System.out.println((new StringBuilder()).append("outerMethod e = ").append(e).toString());
+            }
+
+            private int b;
+            final int val$d;
+            final int val$e;
+            final OuterClass this$0;
+
+
+            public _cls1InnerClass()
+            {
+                this.this$0 = OuterClass.this;
+                d = i;
+                e = j;
+                super();
+                b = 4;
+                System.out.println("InnerClass()...");
+            }
+        }
+
+        _cls1InnerClass inc = new _cls1InnerClass();
+        System.out.println((new StringBuilder()).append("inc.b = ").append(inc.b).toString());
+        inc.show();
+        f += inc.b;
+        System.out.println((new StringBuilder()).append("f = ").append(f).toString());
+    }
+
+    private int a;
+    private int b;
+    private static int c = 3;
+
+
+
+
+}

@@ -1,0 +1,64 @@
+// Decompiled by DJ v3.7.7.81 Copyright 2004 Atanas Neshkov  Date: 2020/4/29 ¤U¤È 07:47:33
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   MainClass.java
+
+package com.sample;
+
+import java.io.PrintStream;
+
+public class MainClass
+{
+
+    public MainClass()
+    {
+    }
+
+    public static void main(String args[])
+    {
+        String s1 = "java";
+        String s2 = "Java";
+        String s3 = "Java";
+        String s4 = new String("Java");
+        String s5 = new String("Java");
+        System.out.println((new StringBuilder()).append("s2==s3\uFF1A").append(s2 == s3).toString());
+        System.out.println((new StringBuilder()).append("s4==s5\uFF1A").append(s4 == s5).toString());
+        System.out.println((new StringBuilder()).append("equals()\u5927\u5C0F\u5BEB\u4E0D\u540C\uFF1A").append(s1.equals(s5)).toString());
+        System.out.println((new StringBuilder()).append("equalsIgnoreCase() \u4E0D\u5206\u5927\u5C0F\u5BEB\uFF1A").append(s1.equalsIgnoreCase(s5)).toString());
+        System.out.println("----------");
+        String s6 = "Java";
+        String s7 = "SE";
+        String s8 = (new StringBuilder()).append(s6).append(s7).toString();
+        String s9 = "JavaSE";
+        String s10 = "JavaSE";
+        System.out.println((new StringBuilder()).append("s8\uFF1A").append(s8).toString());
+        System.out.println((new StringBuilder()).append("s9\uFF1A").append(s9).toString());
+        System.out.println((new StringBuilder()).append("s10\uFF1A").append(s10).toString());
+        System.out.println((new StringBuilder()).append("s8==s9\uFF1A").append(s8 == s9).toString());
+        System.out.println((new StringBuilder()).append("s9==s10\uFF1A").append(s9 == s10).toString());
+        System.out.println((new StringBuilder()).append("s10==s8\uFF1A").append(s10 == s8).toString());
+        String a = "a";
+        String b = "b";
+        String c = "c";
+        String d = "d";
+        String temp1 = (new StringBuilder()).append(a).append(b).toString();
+        System.out.println((new StringBuilder()).append("1. temp1\uFF1A").append(temp1).toString());
+        temp1.concat(c);
+        temp1 = temp1.concat(c);
+        System.out.println((new StringBuilder()).append("2. temp1\uFF1A").append(temp1).toString());
+        System.out.println("--------------------------");
+        String temp2 = (new StringBuilder()).append(a).append(b).toString();
+        temp2 = (new StringBuilder()).append(temp2).append(c).toString();
+        temp2 = (new StringBuilder()).append(temp2).append(d).toString();
+        System.out.println((new StringBuilder()).append("temp2\uFF1A").append(temp2).toString());
+        StringBuilder temp3 = new StringBuilder();
+        temp3.append(a).append(d);
+        temp3.append(c);
+        temp3.append(d);
+        System.out.println((new StringBuilder()).append("temp3\uFF1A").append(temp3.toString()).toString());
+        System.out.println("--------------------------");
+        String str = " This is a book. \u9019\u662F\u4E00\u672C\u66F8\u3002 ";
+        System.out.println("012345678901234567");
+        System.out.println(str);
+    }
+}

@@ -1,0 +1,32 @@
+// Decompiled by DJ v3.7.7.81 Copyright 2004 Atanas Neshkov  Date: 2020/5/8 ¤U¤È 07:49:10
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   MainClass.java
+
+package com.sample;
+
+
+public class MainClass
+{
+
+    public MainClass()
+    {
+    }
+
+    public static void main(String args[])
+    {
+        average(new int[] {
+            10, 20
+        });
+        average(new int[] {
+            10, 20, 30
+        });
+        average(new int[] {
+            10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+        });
+    }
+
+    private static transient void average(int ai[])
+    {
+    }
+}

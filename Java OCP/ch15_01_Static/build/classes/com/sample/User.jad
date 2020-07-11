@@ -1,0 +1,45 @@
+// Decompiled by DJ v3.7.7.81 Copyright 2004 Atanas Neshkov  Date: 2020/6/1 ¤U¤È 09:03:55
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   User.java
+
+package com.sample;
+
+import java.io.PrintStream;
+
+// Referenced classes of package com.sample:
+//            MainClass
+
+public class User
+{
+
+    public User()
+    {
+        System.out.println((new StringBuilder()).append("@@@@@@ User {} count = ").append(++MainClass.count).toString());
+        System.out.println((new StringBuilder()).append("User() count = ").append(++MainClass.count).toString());
+        id++;
+        uid = String.format("U%02d", new Object[] {
+            Integer.valueOf(id)
+        });
+        System.out.println((new StringBuilder()).append("id\uFF1A").append(id).append(", uid\uFF1A").append(uid).toString());
+    }
+
+    public User(String name)
+    {
+        System.out.println((new StringBuilder()).append("@@@@@@ User {} count = ").append(++MainClass.count).toString());
+        System.out.println((new StringBuilder()).append("User() count = ").append(++MainClass.count).toString());
+        id++;
+        uid = String.format("U%02d", new Object[] {
+            Integer.valueOf(id)
+        });
+        System.out.println((new StringBuilder()).append("id\uFF1A").append(id).append(", uid\uFF1A").append(uid).append(", name\uFF1A").append(name).toString());
+    }
+
+    private static int id = 0;
+    private String uid;
+
+    static 
+    {
+        System.out.println((new StringBuilder()).append("User static{} count = ").append(++MainClass.count).toString());
+    }
+}

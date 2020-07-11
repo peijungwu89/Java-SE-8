@@ -1,0 +1,41 @@
+// Decompiled by DJ v3.7.7.81 Copyright 2004 Atanas Neshkov  Date: 2020/6/5 ¤U¤È 06:49:16
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   PowerState.java
+
+package com.sample;
+
+
+public final class PowerState extends Enum
+{
+
+    public static PowerState[] values()
+    {
+        return (PowerState[])$VALUES.clone();
+    }
+
+    public static PowerState valueOf(String name)
+    {
+        return (PowerState)Enum.valueOf(com/sample/PowerState, name);
+    }
+
+    private PowerState(String s, int i)
+    {
+        super(s, i);
+    }
+
+    public static final PowerState OFF;
+    public static final PowerState ON;
+    public static final PowerState SUSPEND;
+    private static final PowerState $VALUES[];
+
+    static 
+    {
+        OFF = new PowerState("OFF", 0);
+        ON = new PowerState("ON", 1);
+        SUSPEND = new PowerState("SUSPEND", 2);
+        $VALUES = (new PowerState[] {
+            OFF, ON, SUSPEND
+        });
+    }
+}

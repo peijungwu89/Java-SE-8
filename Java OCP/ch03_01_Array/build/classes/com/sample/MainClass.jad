@@ -1,0 +1,47 @@
+// Decompiled by DJ v3.7.7.81 Copyright 2004 Atanas Neshkov  Date: 2020/5/4 ¤U¤È 07:29:18
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   MainClass.java
+
+package com.sample;
+
+import java.io.PrintStream;
+
+public class MainClass
+{
+
+    public MainClass()
+    {
+    }
+
+    public static void main(String args[])
+    {
+        String str1[] = {
+            "Java", "Android", "Python"
+        };
+        System.out.println((new StringBuilder()).append("str1\uFF1A").append(str1).toString());
+        System.out.println((new StringBuilder()).append("1. ").append(str1[0]).toString());
+        System.out.println((new StringBuilder()).append("2. ").append(str1[1]).toString());
+        System.out.println((new StringBuilder()).append("3. ").append(str1[2]).toString());
+        str1[2] = "Python 3.8";
+        System.out.println("------------");
+        for(int i = 0; i < str1.length; i++)
+            System.out.println((new StringBuilder()).append(i + 1).append(". ").append(str1[i]).toString());
+
+        System.out.println("------------");
+        int iArray[] = new int[5];
+        iArray[1] = 20;
+        iArray[3] = 40;
+        int ai[] = iArray;
+        int j = ai.length;
+        for(int k = 0; k < j; k++)
+        {
+            int i = ai[k];
+            System.out.printf("%d | ", new Object[] {
+                Integer.valueOf(i)
+            });
+        }
+
+        System.out.println("\n------------");
+    }
+}

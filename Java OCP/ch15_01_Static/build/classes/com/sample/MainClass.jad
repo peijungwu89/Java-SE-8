@@ -1,0 +1,65 @@
+// Decompiled by DJ v3.7.7.81 Copyright 2004 Atanas Neshkov  Date: 2020/6/1 ¤U¤È 09:20:58
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   MainClass.java
+
+package com.sample;
+
+import java.io.PrintStream;
+
+// Referenced classes of package com.sample:
+//            User
+
+public class MainClass
+{
+
+    public MainClass()
+    {
+    }
+
+    public static void main(String args[])
+    {
+        System.out.println("int \u6700\u5927\u503C\uFF1A2147483647");
+        System.out.println(Integer.parseInt("123") * 100);
+        System.out.println("PI\uFF1A3.141592653589793");
+        System.out.println((new StringBuilder()).append("2 ^ 5 = ").append(Math.pow(2D, 5D)).toString());
+        System.out.println("-------------------");
+        System.out.println((new StringBuilder()).append("main() count = ").append(++count).toString());
+        System.out.println("-------------------");
+        switches[1] = false;
+        switches[4] = false;
+        boolean aflag[] = switches;
+        int i = aflag.length;
+        for(int j = 0; j < i; j++)
+        {
+            boolean boo = aflag[j];
+            System.out.printf("%b | ", new Object[] {
+                Boolean.valueOf(boo)
+            });
+        }
+
+        System.out.println("\n-------------------");
+        User user1 = new User();
+        User user2 = new User("Lisa");
+        System.out.println("-------------------");
+        int a = 1;
+        System.out.println((new StringBuilder()).append("1. a = ").append(a).toString());
+        int b = 2;
+        System.out.println((new StringBuilder()).append("2. b = ").append(b).toString());
+        b = 3;
+        System.out.println((new StringBuilder()).append("3. b = ").append(b).toString());
+    }
+
+    public static int count;
+    private static final boolean switches[];
+
+    static 
+    {
+        count = 0;
+        switches = new boolean[5];
+        System.out.println((new StringBuilder()).append("static{} count = ").append(++count).toString());
+        for(int i = 0; i < switches.length; i++)
+            switches[i] = true;
+
+    }
+}

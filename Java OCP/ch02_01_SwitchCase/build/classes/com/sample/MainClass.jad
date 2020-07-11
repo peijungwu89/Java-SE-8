@@ -1,0 +1,61 @@
+// Decompiled by DJ v3.7.7.81 Copyright 2004 Atanas Neshkov  Date: 2020/4/29 ¤U¤È 09:28:19
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   MainClass.java
+
+package com.sample;
+
+import java.io.PrintStream;
+import java.util.Scanner;
+
+public class MainClass
+{
+
+    public MainClass()
+    {
+    }
+
+    public static void main(String args[])
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("\u8F38\u5165 Apple | Kiwi | Orange\uFF1A");
+        String keyin = scanner.next();
+        String s = keyin;
+        byte byte0 = -1;
+        switch(s.hashCode())
+        {
+        case 63476538: 
+            if(s.equals("Apple"))
+                byte0 = 0;
+            break;
+
+        case 2339024: 
+            if(s.equals("Kiwi"))
+                byte0 = 1;
+            break;
+
+        case -1924984242: 
+            if(s.equals("Orange"))
+                byte0 = 2;
+            break;
+        }
+        switch(byte0)
+        {
+        case 0: // '\0'
+            System.out.println("\u860B\u679C");
+            break;
+
+        case 1: // '\001'
+            System.out.println("\u5947\u7570\u679C");
+            break;
+
+        case 2: // '\002'
+            System.out.println("\u67F3\u6A59");
+            break;
+
+        default:
+            System.out.println("\u67E5\u7121\u6B64\u5546\u54C1!");
+            break;
+        }
+    }
+}
